@@ -4,10 +4,10 @@ const user = new mongo.Schema({
     username: {
         required: true,
         unique: true,
-        type: String
+        type: String,
     },
     github_data: Object,
-    mails: [String],
+    mails: [{iat: Date, description: String}],
     access_token: {
         required: true,
         unique: true,
