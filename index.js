@@ -22,10 +22,10 @@ const imageRequested= require("./middlewares/imageRequest");
 const createTracker= require("./middlewares/createTracker");
 const viewTracker= require("./middlewares/viewTracker");
 const listTrackers= require("./middlewares/listTrackers");
-const getToken = require("./middlewares/login/getToken");
-const getUser = require("./middlewares/login/getUser");
-const saveUser = require("./middlewares/login/saveUser");
-const login = require("./middlewares/login/login");
+const getToken = require("./middlewares/githubLogin/getToken");
+const getUser = require("./middlewares/githubLogin/getUser");
+const saveUser = require("./middlewares/githubLogin/saveUser");
+const login = require("./middlewares/githubLogin/login");
 
 
 
@@ -53,7 +53,7 @@ app.post("/new/tracker", createTracker);
 
 
 app.get("/tracker/:id", imageRequested, (req, res)=>{
-    res.sendFile(__dirname+"/assets/main.png");
+    res.sendFile(__dirname+"/assets/free.png");
 })
 
 app.get("/view/tracker/:id", viewTracker);
